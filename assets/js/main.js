@@ -132,6 +132,8 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 let ourSkills = document.querySelector('.skills__container');
 const homeTitle = document.querySelector('.home__title-color');
 const titleAbout = document.querySelector('.about__text');
+const imageAbout = document.querySelector('.about__img');
+const imageSkills = document.querySelector('.skills__image__pc');
 
 window.onscroll = function(){
 
@@ -168,10 +170,13 @@ window.onscroll = function(){
      
  if (windowScrollTop > (titleOffsetTop + titleOtterHieght - windowHeight) ) {
     titleAbout.style.opacity = 1;
+    imageAbout.style.transform = 'translateX(0rem)';
+ 
  }
 
  if (windowHeight < windowScrollTop ) {
     tornaSu.style.display = 'flex';
+    imageSkills.style.paddingLeft = 0;
  }else{
     tornaSu.style.display = 'none';
 
